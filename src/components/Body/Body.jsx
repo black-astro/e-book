@@ -1,56 +1,25 @@
 import React, { useEffect, useRef } from "react";
-import "./css/turn.css";
-
-const Turn = ({ options = {}, children }) => {
-  const elRef = useRef(null);
-
-  useEffect(() => {
-    const $ = window.$; // jQuery에 접근
-    const book = $(elRef.current).turn({ ...options });
-
-    // 키보드 이벤트 핸들러
-    const handleKeyDown = (event) => {
-      if (event.key === 'ArrowLeft') book.turn("previous");
-      if (event.key === 'ArrowRight') book.turn("next");
-    };
-
-    document.addEventListener("keydown", handleKeyDown, false);
-
-    return () => {
-      book.turn("destroy").remove();
-      document.removeEventListener("keydown", handleKeyDown, false);
-    };
-  }, [options]);
-
-  return <div ref={elRef} id="book">{children}</div>;
-};
-
-//옵션
-const options = {
-  width: 1200,
-  height: 600,
-  autoCenter: true,
-  display: "double", //double : 두장씩보기  , single : 한장씩보기 [모바일버전]
-  acceleration: true,
-  elevation: 50,
-  gradients: true,
-  page: 2 //한번에 볼때 웹페이지경우 
-};
-
-const pages = [
-  "https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/01.jpg",
-  "https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/02.jpg",
-  "https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/03.jpg",
-  "https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/04.jpg",
-  "https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/05.jpg",
-  "https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/06.jpg"
-];
-
+import Turn from "@components/Body/book/Turn";
+import pages from "@components/Body/book/EBookPage";
+import "@components/Body/css/Body.css";
 
 const Body = () => {
+
+    //옵션
+  const options = {
+    width: 1300,
+    height: 600,
+    autoCenter: true,
+    display: "double", //double : 두장씩보기  , single : 한장씩보기 [모바일버전]
+    acceleration: true,
+    elevation: 50,
+    gradients: true,
+    page: 2 //한번에 볼때 웹페이지경우 
+  };
+
   return (
     <>
-      <div>
+      <div className="turn-box">
         <Turn options={options}>
           <div className="cover"><h1>Title</h1></div>
           {pages.map((page, index) => (
