@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-// import "./css/body.css";
 import "./css/turn.css";
 
 const Turn = ({ options = {}, children }) => {
@@ -11,8 +10,8 @@ const Turn = ({ options = {}, children }) => {
 
     // 키보드 이벤트 핸들러
     const handleKeyDown = (event) => {
-      if (event.keyCode === 37) book.turn("previous");
-      if (event.keyCode === 39) book.turn("next");
+      if (event.key === 'ArrowLeft') book.turn("previous");
+      if (event.key === 'ArrowRight') book.turn("next");
     };
 
     document.addEventListener("keydown", handleKeyDown, false);
@@ -28,14 +27,14 @@ const Turn = ({ options = {}, children }) => {
 
 //옵션
 const options = {
-  width: 1300,
+  width: 1200,
   height: 600,
   autoCenter: true,
-  display: "double",
+  display: "double", //double : 두장씩보기  , single : 한장씩보기 [모바일버전]
   acceleration: true,
   elevation: 50,
   gradients: true,
-  page: 2
+  page: 2 //한번에 볼때 웹페이지경우 
 };
 
 const pages = [
