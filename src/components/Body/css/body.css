@@ -1,5 +1,4 @@
-.turn-box{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.body-root{
+  width: 1304px;
+  height: 80%;
 }

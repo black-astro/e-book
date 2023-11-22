@@ -31,14 +31,17 @@ const Turn = ({ options = {}, children }) => {
         // };
 
         //첫번째페이지 넘길때이벤트
-        $("#book").bind("first", function(event) {
-            event.preventDefault();
-        });
-        
+        $("#book").bind("turning", function(event, page, view) {
+            if (page==1) {
+              event.preventDefault();
+            }
+          });
+
+
         //마지막페이지 넘길때 이벤트
-        $("#book").bind("last", function(event) {
-            alert("You are at the end of the flipbook");
-        });
+        // $("#book").bind("last", function(event) {
+        //      alert("You are at the end of the flipbook");
+        // });
       
         // book.bind("turning", handleTurning);
         document.addEventListener("keydown", handleKeyDown, false);

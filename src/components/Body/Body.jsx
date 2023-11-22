@@ -9,17 +9,17 @@ const Body = () => {
   const options = {
     width: 1300,
     height: 600,
+    gradients: true,
     autoCenter: true,
     display: "double", //double : 두장씩보기  , single : 한장씩보기 [모바일버전]
     acceleration: true,
     elevation: 50,
-    gradients: true,
     page: 2 //한번에 볼때 웹페이지경우 
   };
 
   return (
     <>
-      <div className="turn-box">
+      <div className="body-root">
         <Turn options={options}>
           <div className="cover"><h1>Title</h1></div>
           {pages.map((page, index) => (

@@ -11,16 +11,18 @@ body{
 }
 #book{
 	margin: 0 auto;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3) !important; /* 오른쪽 5px, 아래쪽 5px 위치에 그림자 적용 */
 }
 
 #book .turn-page{
 	background-color:white;
-	box-shadow: 0 0 20px rgba(0,0,0,0.5); /* 그림자 효과 추가 */
+	box-shadow: 0 0 20px rgba(128, 128, 128, 0.5); /* 그림자 효과 추가 */
     transform: rotateY(-30deg); /* 페이지 커브 효과 */
 }
 
 #book .cover{
-	background:#333;
+	background:#1f1f1f;
+	 /* 오른쪽과 아래쪽에 그림자 추가 */
 }
 
 #book .cover h1{
@@ -71,32 +73,4 @@ body{
 	background-image:-moz-linear-gradient(left, #FFF 95%, #ddd 100%);
 	background-image:-o-linear-gradient(left, #FFF 95%, #ddd 100%);
 	background-image:-ms-linear-gradient(left, #FFF 95%, #ddd 100%);
-}
-
-#book .turn-page {
-    position: relative; /* 가상 요소를 위한 상대 위치 설정 */
-}
-
-#book .turn-page:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 2px; /* 세로 선의 너비 */
-    background-image: linear-gradient(to bottom, #050505, #000000, #fff); /* 세로 선 그라데이션 */
-}
-
-#book .turn-page:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 2px; /* 세로 선의 너비 */
-    background-image: linear-gradient(to bottom, #181818, #000000, #fff); /* 세로 선 그라데이션 */
-}
-
-#book .turn-page {
-    box-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.4), inset 1px 0 3px rgba(0, 0, 0, 0.4);
 }

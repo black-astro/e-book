@@ -1289,6 +1289,8 @@ turnMethods = {
       else
         data.pages[current].flip('turnPage',
           (page>current) ? 'l' : 'r');
+
+          
     else {
       if (data.direction=='ltr')
         data.pages[current].flip('turnPage',
