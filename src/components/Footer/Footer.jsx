@@ -1,8 +1,10 @@
 import "@components/Footer/css/footer.css";
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { contextApi } from '@components/utils/sideBarContext';
+import _ from 'lodash';
 
 function valuetext(value) {
   return `${value}°C`;
@@ -23,14 +25,18 @@ const theme = createTheme({ //사용자 정의색상 슬라이더색
 },
 });
 
-export default function Footer() {
+const Footer = () => {
+
+const { isDesktop, isMobile,windowWidth} = contextApi();
+
+const wid = _.cloneDeep(windowWidth) * 0.5;
 
     return (
       <>
           <div className="footer-root">
               <div className="slider-box">
                 <div>
-                <Box sx={{ width: 1000 }}>
+                <Box sx={{ width: wid }}>
                   <ThemeProvider theme={theme}>
                     <Slider
                       color="primary"
@@ -50,4 +56,6 @@ export default function Footer() {
           </div>
       </>
     );
-  }
+  };
+
+  export default Footer;

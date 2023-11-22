@@ -10,7 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { useSideBar } from '@components/utils/sideBarContext';
+import { contextApi } from '@components/utils/sideBarContext';
 
 export default function Sidebar() {
 
@@ -22,7 +22,7 @@ export default function Sidebar() {
     right: false,
   });
 
-  const { isSideBarOpen,toggleSideBar} = useSideBar();
+  const { isSideBarOpen,toggleSideBar} = contextApi();
 
   React.useEffect(()=>{
     setState(item => ({...item,left:isSideBarOpen}));

@@ -12,3 +12,10 @@
   height: 40px; /* 필요한 경우 높이 설정 */
   padding-top: 7px;
 }
+
+
+@media (max-width: 1000px) {
+  .footer-root{
+    width: 100%;
+  }
+}

@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { useSideBar } from '@components/utils/sideBarContext';
+import { contextApi } from '@components/utils/sideBarContext';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import "@components/Header/css/header.css";
 
 export default function Header() {
 
-  const {toggleSideBar} = useSideBar(); //context api
+  const {toggleSideBar} = contextApi(); //context api
 
   const [alignment, setAlignment] = React.useState('web');
 
@@ -18,7 +18,6 @@ export default function Header() {
     return (
       <>
           <div className="header-root">
-            
               <ToggleButtonGroup
                 color="primary"
                 value={alignment}
@@ -26,7 +25,7 @@ export default function Header() {
                 onChange={handleChange}
                 aria-label="Platform"
               >
-                <ToggleButton onClick={()=>{toggleSideBar()}}>menu</ToggleButton>
+                <ToggleButton value="tste" onClick={()=>{toggleSideBar()}}>menu</ToggleButton>
                 <ToggleButton value="android">Android</ToggleButton>
                 <ToggleButton value="ios">iOS</ToggleButton>
               </ToggleButtonGroup>

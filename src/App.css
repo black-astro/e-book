@@ -48,3 +48,11 @@ html, body {
 .read-the-docs {
   color: #888;
 }
+
+/* 모바일 화면에서의 스타일 */
+@media (max-width: 1000px) {
+  #root {
+    max-width: 100%;
+    width: 100%;
+  }
+}
