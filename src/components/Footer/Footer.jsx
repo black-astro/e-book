@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { contextApi } from '@components/utils/sideBarContext';
+import "@/App.css";
 import _ from 'lodash';
 
 function valuetext(value) {
@@ -27,32 +28,35 @@ const theme = createTheme({ //사용자 정의색상 슬라이더색
 
 const Footer = () => {
 
-const { isDesktop, isMobile,windowWidth} = contextApi();
+const { isDesktop, isMobile,windowWidth, webChk} = contextApi();
 
 const wid = _.cloneDeep(windowWidth) * 0.5;
 
     return (
       <>
           <div className="footer-root">
+          {!webChk &&
               <div className="slider-box">
                 <div>
-                <Box sx={{ width: wid }}>
-                  <ThemeProvider theme={theme}>
-                    <Slider
-                      color="primary"
-                      aria-label="Temperature"
-                      defaultValue={0} 
-                      getAriaValueText={valuetext}
-                      valueLabelDisplay="off"
-                      step={10}
-                      marks
-                      min={0}
-                      max={100}
-                    />
-                    </ThemeProvider>
-                  </Box>
-                </div>
+                  
+                    <Box sx={{ width: wid }}>
+                      <ThemeProvider theme={theme}>
+                        <Slider
+                          color="primary"
+                          aria-label="Temperature"
+                          defaultValue={0} 
+                          getAriaValueText={valuetext}
+                          valueLabelDisplay="off"
+                          step={10}
+                          marks
+                          min={0}
+                          max={100}
+                        />
+                        </ThemeProvider>
+                    </Box>
+                </div>   
               </div>
+              }
           </div>
       </>
     );

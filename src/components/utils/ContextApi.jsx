@@ -6,6 +6,26 @@ import { useMediaQuery } from 'react-responsive';
 
 export const SideBarProvider = ({ children }) => {
 
+  const isMobile = useMediaQuery({ maxWidth: 767 }); //모바일
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 }); //테블릿
+  const isLargeTablet = useMediaQuery({ minWidth: 1024, maxWidth: 1279 }); //라지테블릿
+  const isDesktop = useMediaQuery({ minWidth: 1280 }); //pc
+
+  //첫 로딩페이지 web | e-book
+  const [webChk, setWebChk] = useState(true);
+
+  useEffect(() => {
+    //e-book web 배경색 변경
+    const backColor = webChk ? '#fffff' : '#cacaca';
+   
+    document.body.style.backgroundColor = backColor;
+
+    // 컴포넌트 언마운트 시 원래 배경색으로 복원
+    return () => {
+      document.body.style.backgroundColor = backColor;
+    };
+  }, [webChk]); // backgroundColor 상태가 변경될 때마다 실행
+
   //접속기기 body 넓이구하기
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -22,11 +42,6 @@ export const SideBarProvider = ({ children }) => {
     };
   }, []);
 
-  //데스크탑 일시 true
-  const isDesktop = useMediaQuery({ minDeviceWidth: 1300 });
-  //모바일 일시 true
-  const isMobile = useMediaQuery({ maxDeviceWidth: 1300 });
-
   //사이드바 on off
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
@@ -36,7 +51,7 @@ export const SideBarProvider = ({ children }) => {
   };
 
   return (
-    <SideBarContext.Provider value={{ isSideBarOpen, toggleSideBar, isDesktop, isMobile ,windowWidth }}>
+    <SideBarContext.Provider value={{ isSideBarOpen, toggleSideBar, isDesktop, isMobile ,windowWidth, webChk }}>
       {children}
     </SideBarContext.Provider>
   );

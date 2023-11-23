@@ -3,13 +3,17 @@ import Turn from "@components/Body/book/Turn";
 import pages from "@components/Body/book/EBookPage";
 import "@components/Body/css/body.css";
 import { contextApi } from '@components/utils/sideBarContext';
+import "@/App.css";
+import _ from 'lodash';
 
 const Body = () => {
- // const [page ,setpage] = useState(pages);
-  const { isDesktop,isMobile} = contextApi();
-  
+
+  const { isDesktop,isMobile,windowWidth,webChk} = contextApi();
+
+  const wid = isMobile ? _.cloneDeep(windowWidth) : 1300;
+
   let options = {
-    width: 1300,
+    width: wid,
     height: 600,
     gradients: true,
     autoCenter: true,
@@ -17,12 +21,28 @@ const Body = () => {
     acceleration: true,
     elevation: 50,
     page: 2,
-    pages:pages.length
   };
+
+  if(isMobile){
+    options = {
+      gradients: true,
+      autoCenter: true,
+      display: isMobile ? "single" : "double",
+      acceleration: true,
+      elevation: 50,
+      page: 2,}
+  }
 
   return (
     <div className="body-root">
-     
+      {/* WEB body 컴포넌트*/}
+      {webChk &&
+        <div>
+          ㅅㄷㄴㅅ
+        </div>
+      }
+      {/* e-book body 컴포넌트*/}
+      {!webChk && 
         <Turn options={options}>
           <div className="cover"><h1>Title</h1></div>
           {pages.map((pageContent, index) => (
@@ -31,7 +51,7 @@ const Body = () => {
             </div>
           ))}
         </Turn>
-     
+      }
     </div>
   );
 };
