@@ -38,7 +38,7 @@ const Body = () => {
       {/* WEB body 컴포넌트*/}
       {webChk &&
         <div>
-          ㅅㄷㄴㅅ
+          test
         </div>
       }
       {/* e-book body 컴포넌트*/}
