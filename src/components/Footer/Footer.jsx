@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { contextApi } from '@components/utils/sideBarContext';
-import "@/App.css";
 import _ from 'lodash';
 
 function valuetext(value) {

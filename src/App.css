@@ -1,16 +1,28 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 
 #root {
-  max-width: 1920px;
-  height: 95%;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
-  overflow: hidden;
+  width: 100%;
+  margin: 0 auto; /* 수평 중앙 정렬 */
+  box-sizing: border-box; /* 패딩을 포함한 너비 계산 */
+}
+
+@media only screen and (max-width: 767px) {
+  #root {
+    
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 테블릿 스타일 */
+  #root {
+   
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* 라지 테블릿 스타일 */
+  #root {
+   
+  }
 }
 
 .logo {
@@ -47,12 +59,4 @@ html, body {
 
 .read-the-docs {
   color: #888;
-}
-
-/* 모바일 화면에서의 스타일 */
-@media (max-width: 1000px) {
-  #root {
-    max-width: 100%;
-    width: 100%;
-  }
 }

@@ -1,0 +1,28 @@
+
+/*========== Body_1 컴포넌트 ==========*/
+.body_1-title{
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom:1.5em;
+  }
+  /* 바디1 이미지 */
+  .body_1-info{
+    display: flex;
+  }
+  .bon-img-box{
+    text-align: center;
+  }
+  .body_1-box{
+    padding-top:3em;
+    padding-bottom:3em;
+  }
+  .bon-img-box{
+    width: 50%;
+  }
+  .bon-img-text{
+    width: 50%;
+    font-size: 16px;
+  
+    display: flex;
+    align-items:center ;
+  }

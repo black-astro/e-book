@@ -1,0 +1,22 @@
+
+/*========== Body_1 컴포넌트 ==========*/
+.body_4-title{
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom:1.5em;
+}
+/* 바디1 이미지 */
+.body_4-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.body_4-box{
+ 
+}
+
+.body_4-infoBox{
+  width: 100%;
+  height: 600px;
+  background-color: darkgray;
+}

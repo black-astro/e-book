@@ -1,26 +1,47 @@
-import * as React from 'react';
+import { useState } from 'react';
 
 import { contextApi } from '@components/utils/sideBarContext';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import "@components/Header/css/header.css";
-import "@/App.css";
 
-export default function Header() {
+const Header = () => {
 
   const {toggleSideBar,webChk} = contextApi(); //context api
 
-  const [alignment, setAlignment] = React.useState('web');
+  const [alignment, setAlignment] = useState('web');
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
 
-  
-
   return (
     <>
         <div className="header-root">
+        {
+            webChk &&
+            <>
+              <div className='header-web-box'>
+                <p className='header-title'>
+                  Ebstein's <br/><span>Anomaly</span>
+                </p>
+                <div className='header-link-box'>
+                    <a>정상심장과  <br/><span>앱스타인 기형</span></a>
+                    <a>진단과 합병증</a>
+                    <a>치료</a>
+                    <a>용어정리</a>
+                </div>
+              </div>
+
+              <div className='header-web-bottom-box'>
+                <div>
+                  <span>정상심장과 앱스타인 기형</span>
+                </div>
+              </div>
+            </>
+          }
+
+          {/* e-book 기능*/}
           {!webChk && 
             <ToggleButtonGroup
               color="primary"
@@ -37,4 +58,6 @@ export default function Header() {
         </div>
     </>
   );
-  }
+ }
+
+export default Header;

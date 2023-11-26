@@ -1,0 +1,54 @@
+
+/*========== Body_2 컴포넌트 ==========*/
+
+.body_2-box{
+  padding-top:3em;
+  padding-bottom:3em;
+}
+
+.body_2-title{
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom:1.5em;
+}
+
+/* ====== page2 상단 ====== */
+  .body_2-top{
+   padding-bottom: 3em;
+}
+
+/* ====== page2 중단 ====== */
+ .body_2-mid > div{
+  display: flex;
+  padding-bottom: 3em;
+}
+
+.body_2-mid-title{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.body_2-mid-textBox{
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+/* ====== page2 하단 ====== */
+.body_2-bottom > div{
+  justify-content: center;
+  display: flex;
+}
+.img-test-box{
+  padding: 0.5em;
+}
+/* ====== 이미지 구역 =======*/
+.img-test{
+  background-color: darkgray;
+}
+.img-text{
+  text-align: end;
+}
+

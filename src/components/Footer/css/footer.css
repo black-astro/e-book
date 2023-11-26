@@ -1,5 +1,5 @@
 .footer-root{
-  height:10%;
+  padding: 0 calc((100% - 1440px) / 2);
 }
 
 .slider-box{
@@ -13,9 +13,23 @@
   padding-top: 7px;
 }
 
-
-@media (max-width: 1000px) {
+@media only screen and (max-width: 767px) {
+  /*모바일 스타일*/
   .footer-root{
-    width: 100%;
+   
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 테블릿 스타일 */
+  .footer-root{
+   
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* 라지 테블릿 스타일 */
+  .footer-root{
+  
   }
 }

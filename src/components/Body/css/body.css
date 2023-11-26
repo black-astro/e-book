@@ -1,12 +1,42 @@
 .body-root{
-  width: 1304px;
-  height: 80%;
+  padding: 0 calc((100% - 1278px) / 2);
+}
+/* =========== 확대 모달 css ===========*/
+.zommBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.svg-box > div{
+  cursor: grab;
+  width: auto !important;
+  text-align: center; 
+}
+.svg-box > div:active{
+  cursor: grabbing;
+}
+.svg-box > div > div{
+  display: block;
+  width: auto !important;
+}
+/*========== body 반응형 미디어 쿼리 ==========*/
+@media only screen and (max-width: 767px) {
+  /*모바일 스타일*/
+  .body-root{
+    padding: 0 5em 0 5em;
+  }
 }
 
-
-@media (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 테블릿 스타일 */
   .body-root{
-    width: 100%;
-    height: 60%;
+    padding: 0 5em 0 5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* 라지 테블릿 스타일 */
+  .body-root{
+    padding: 0 5em 0 5em;
   }
 }

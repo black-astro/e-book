@@ -1,10 +1,94 @@
-.header-root{
-  height:10%;
+.header-root{ 
+  height: 100%;
+  background-color: rgba(251,219,219,0.6);
+  padding: 0 calc((100% - 1440px) / 2);
 }
 
-@media (max-width: 1000px) {
-  .header-root{
-    width: 100%;
-    height: 20%;
+/*========= 헤더 타이틀 구역==============*/
+.header-web-box{
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 0 3rem 0 3rem;
+}
+
+.header-title{
+  font-size: 25px;
+  font-weight: bold;
+}
+.header-title > span{
+  padding-left: 0.5rem;
+} 
+
+.header-link-box{
+  display: flex;
+  align-items: center;
+}
+
+.header-link-box > a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  padding: 0 2rem 0 2rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header-link-box > a:hover{
+  color: #777;
+}
+
+.header-link-box > a > span{
+  padding-left: 0.5rem;
+}
+/* 헤더 타이틀 바텀 */
+.header-web-bottom-box{
+  position: relative;
+}
+
+/* .header-web-bottom-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/src/assets/img/svg/heart.svg);
+  background-size: 100% 100%;
+  opacity: 0.8; 
+  z-index: -1; 
+} */
+
+.header-web-bottom-box > div{
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.header-web-bottom-box > div > span{
+  font-size: 64px;
+  font-weight: bold;
+  color: #965757;
+}
+
+.header-link-box{
+  text-align: center;
+}
+
+.header-link-box > img{
+  
+}
+/*========= 반응형 미디어 쿼리 구역 ==============*/
+@media only screen and (max-width: 767px) {
+  /*모바일 스타일*/
+  .header-link-box > a {
+    font-size: 0.5em;
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 테블릿 스타일 */
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* 라지 테블릿 스타일 */
 }

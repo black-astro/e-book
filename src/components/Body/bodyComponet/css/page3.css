@@ -1,0 +1,35 @@
+
+/*========== Body_1 컴포넌트 ==========*/
+.body_3-title{
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom:1.5em;
+}
+/* 바디1 이미지 */
+.body_3-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.body_3-box{
+  padding-top:3em;
+  padding-bottom:3em;
+}
+
+/* 정상 이미지 박스 */
+.bon-img-left-box{
+  font-size: 1.5em;
+}
+.bon-img-left-box > img{
+  width: 80%;
+}
+/* 기형 이미지 박스 */
+.bon-img-right-box{
+  font-size: 1.5em;
+}
+.bon-img-right-box  > img{
+  width: 80%;
+}
+.bon-img-info-text{
+  text-align: center;
+}

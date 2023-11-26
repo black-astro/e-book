@@ -51,7 +51,7 @@ export const SideBarProvider = ({ children }) => {
   };
 
   return (
-    <SideBarContext.Provider value={{ isSideBarOpen, toggleSideBar, isDesktop, isMobile ,windowWidth, webChk }}>
+    <SideBarContext.Provider value={{ isSideBarOpen, toggleSideBar, isDesktop, isMobile ,isTablet, isLargeTablet,windowWidth, webChk }}>
       {children}
     </SideBarContext.Provider>
   );
