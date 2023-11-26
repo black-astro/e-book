@@ -26,7 +26,7 @@ const Body = () => {
   const handleScroll = _.throttle(() => {
     if (isScrolling.current) return;
 
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const scrollPosition = window.scrollY; // 모바일 환경 고려
 
     for (let i = 0; i < sectionRefs.length; i++) {
       const section = sectionRefs[i].current;
@@ -38,12 +38,12 @@ const Body = () => {
 
           setTimeout(() => {
             isScrolling.current = false;
-          }, 1000); // 스크롤 애니메이션 지속 시간
+          }, 1500); // 스크롤 애니메이션 지속 시간 증가
         }
         break;
       }
     }
-  }, 100);
+  }, 150); // 스로틀링 시간 증가
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
