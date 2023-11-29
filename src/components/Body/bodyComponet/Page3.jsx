@@ -21,15 +21,15 @@ const Body_3 = () => {
         <div className="body_3-info">
             {/* 정상 심장 */}
             <div className="bon-img-left-box">
-              <Dialog link='src/assets/img/svg/normal_heart.svg'/>
-              <img src="src/assets/img/svg/normal_heart.svg"/>
+              <Dialog link='img/normal_heart.svg'/>
+              <img src="img/normal_heart.svg"/>
               <div className="bon-img-info-text">정상 심장</div>
             </div>
 
             {/* 앱스타인 기형 심장 */}      
             <div className="bon-img-right-box">
-              <Dialog link='src/assets/img/svg/normal_heart.svg'/>
-              <img src="src/assets/img/svg/deformed_heart.svg"/>
+              <Dialog link='img/normal_heart.svg'/>
+              <img src="img/deformed_heart.svg"/>
               <div className="bon-img-info-text">앱스타인 기형 심장</div>
             </div>
         </div> 

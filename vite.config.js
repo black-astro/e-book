@@ -2,8 +2,8 @@ import { defineConfig} from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import svgr from 'vite-plugin-svgr'
 
-// GitHub 사용자 이름과 리포지토리 이름에 맞게 수정하세요
-const base = process.env.NODE_ENV === 'production' ? '/black-astro/' : '/';
+//git 레포지토리 네임으로
+const base = process.env.NODE_ENV === 'production' ? '/e-book/' : '/';
 
 export default defineConfig({  
   base, //git base

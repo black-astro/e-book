@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "@components/Body/bodyComponet/css/page1.css";
-import Bon from '@/assets/img/svg/bon2.svg?react';
+import Bon from '@/assets/img/bon2.svg?react';
 import { contextApi } from '@components/utils/sideBarContext';
 
 import Dialog from "@components/Body/bodyComponet/Dialog";
@@ -22,7 +22,7 @@ const Body_1 = () => {
         <div className="body_1-info">
             {/*왼쪽 이미지 사진 */}
             <div className="bon-img-box">
-              <Dialog link='src/assets/img/svg/bon3.svg'/>
+              <Dialog link='/img/bon3.svg'/>
               <Bon width={"80%"} height={"100%"} fill ="none"/>    
             </div>
 
