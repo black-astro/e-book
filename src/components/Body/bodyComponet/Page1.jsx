@@ -22,7 +22,7 @@ const Body_1 = () => {
         <div className="body_1-info">
             {/*왼쪽 이미지 사진 */}
             <div className="bon-img-box">
-              <Dialog link='/img/bon3.svg'/>
+              <Dialog link='img/bon3.svg'/>
               <Bon width={"80%"} height={"100%"} fill ="none"/>    
             </div>
 

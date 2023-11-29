@@ -67,7 +67,7 @@
                                 <Controls/>
                                 <TransformComponent>
                                     {/* <Bon /> */}
-                                    <img src={link} />
+                                    <img src={link}/>
                                 </TransformComponent>
                             </TransformWrapper>
                         </div>
