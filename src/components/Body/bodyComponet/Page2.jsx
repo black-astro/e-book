@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "@components/Body/bodyComponet/css/page2.css";
 
-const Body_2 = () => {
+const Page_2 = () => {
 
   return (
     <div className="body_2-box">
@@ -76,14 +76,15 @@ const Body_2 = () => {
 
 const ImgBox = () => {
   return (
-    <div className="img-test-box">
-      <div className="img-test" style={{width:'300px', height:'300px'}}>
+    <div className="page2-img-box">
+      <div className="page2-img-card" style={{width:'300px', height:'300px'}}>
 
       </div>
-      <div className="img-text">
+      <div className="page2-img-text">
         병명 TEXT
       </div>
     </div>
   );
 }
-export default Body_2;
+
+export default Page_2;

@@ -41,14 +41,14 @@
   justify-content: center;
   display: flex;
 }
-.img-test-box{
+/* ====== 이미지 구역 =======*/
+.page2-img-box{
   padding: 0.5em;
 }
-/* ====== 이미지 구역 =======*/
-.img-test{
+.page2-img-card{
   background-color: darkgray;
 }
-.img-text{
+.page2-img-text{
   text-align: end;
 }
 

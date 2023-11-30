@@ -5,7 +5,7 @@ import { contextApi } from '@components/utils/sideBarContext';
 
 import Dialog from "@components/Body/bodyComponet/Dialog";
 
-const Body_3 = () => {
+const Page_3 = () => {
   
   const {isDesktop} = contextApi(); 
 
@@ -37,4 +37,4 @@ const Body_3 = () => {
   );
 };
 
-export default Body_3;
+export default Page_3;

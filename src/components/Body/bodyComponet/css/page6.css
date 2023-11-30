@@ -1,0 +1,35 @@
+
+/*========== Body_2 컴포넌트 ==========*/
+
+.body_6-box{
+  padding-top:3em;
+  padding-bottom:3em;
+}
+
+.body_6-title{
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom:1.5em;
+}
+
+/* ====== page2 하단 ====== */
+.body_6-bottom > div{
+  justify-content: space-evenly;
+  display: flex;
+}
+/* ====== 이미지 구역 =======*/
+.page6-img-box{
+  padding: 0.5em;
+}
+.page6-img-card{
+  background-color: white;
+}
+.page6-img-text{
+  text-align: center;
+}
+
+.page6-img-text > .detail{
+  text-align: left;
+}
+
+

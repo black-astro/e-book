@@ -3,7 +3,7 @@ import "@components/Body/bodyComponet/css/page4.css";
 
 import { contextApi } from '@components/utils/sideBarContext';
 
-const Body_4 = () => {
+const Page_4 = () => {
   
   const {isDesktop} = contextApi(); 
 
@@ -26,4 +26,4 @@ const Body_4 = () => {
   );
 };
 
-export default Body_4;
+export default Page_4;

@@ -35,7 +35,6 @@
 
         const handleClose = () => {
             setOpen(false);
-            setScale(1); // 다이얼로그를 닫을 때 스케일 초기화
         };
 
     
