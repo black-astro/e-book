@@ -13,9 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-html {
-  scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
-}
 a {
   font-weight: 500;
   color: #646cff;

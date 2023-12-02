@@ -11,10 +11,7 @@ const Page_5 = () => {
     <div className="body_5-box" style={{paddingTop:'3em',paddingBottom:'3em'}}>
       {/* 타이틀 */}
         <div className="body_5-title">
-            <span>
-                <span>5. </span>
-                앱스타인 기형 진단 방법 
-            </span>
+            <span>앱스타인 기형 진단 방법</span>
         </div>
        
         <div className="body_5-info">

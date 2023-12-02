@@ -39,10 +39,7 @@ const Page_6 = () => {
     <div className="body_6-box" style={{paddingTop:'3em',paddingBottom:'3em'}}>
       {/* 타이틀 */}
         <div className="body_6-title">
-            <span>
-                <span>6. </span>
-                Carpentier 타입
-            </span>
+            <span>Carpentier 타입</span>
         </div>
         <div className="body_6-info">
             {/* 그림 구역 */}

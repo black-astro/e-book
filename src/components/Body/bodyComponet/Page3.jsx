@@ -13,10 +13,7 @@ const Page_3 = () => {
     <div className="body_3-box" style={{paddingTop:'3em',paddingBottom:'3em'}}>
       {/* 타이틀 */}
         <div className="body_3-title">
-            <span>
-                <span>3. </span>
-                정상심장과 앱스타인형 심장
-            </span>
+            <span>정상심장과 앱스타인형 심장</span>
         </div>
         <div className="body_3-info">
             {/* 정상 심장 */}

@@ -7,10 +7,7 @@ const Page_2 = () => {
     <div className="body_2-box">
       {/* 타이틀 */}
         <div className="body_2-title">
-          <span>
-            <span>2. </span>
-              앱스타인 기형이란?
-          </span> 
+          <span>앱스타인 기형이란?</span> 
         </div>
         <div className="body_2-info">
             {/* 상단 info */}

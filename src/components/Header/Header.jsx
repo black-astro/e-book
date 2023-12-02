@@ -26,10 +26,10 @@ const Header = () => {
                   Ebstein's <br/><span>Anomaly</span>
                 </p>
                 <div className='header-link-box'>
-                    <a>정상심장과  <br/><span>앱스타인 기형</span></a>
-                    <a>진단과 합병증</a>
-                    <a>치료</a>
-                    <a>용어정리</a>
+                    <a >정상심장과  <br/><span>앱스타인 기형</span></a>
+                    <a >진단과 합병증</a>
+                    <a >치료</a>
+                    <a >용어정리</a>
                 </div>
               </div>
 

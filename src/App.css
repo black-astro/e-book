@@ -5,6 +5,40 @@
   box-sizing: border-box; /* 패딩을 포함한 너비 계산 */
 }
 
+/*전역 스크롤바 튜닝 핑크*/
+/* 전체 웹페이지에 적용되는 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 12px; /* 스크롤바의 너비 */
+  height: 12px; /* 수평 스크롤바의 높이 */
+}
+
+/* 스크롤바 트랙 (스크롤바 배경) */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* 트랙의 배경 색상 */
+  border-radius: 10px; /* 라운드 모서리 */
+}
+
+/* 스크롤바 핸들 (움직이는 부분) */
+::-webkit-scrollbar-thumb {
+  background: rgba(251,219,219,0.6); /* 핸들의 배경 색상 */
+  border-radius: 10px; /* 라운드 모서리 */
+}
+
+/* 스크롤바 핸들이 호버되었을 때 */
+::-webkit-scrollbar-thumb:hover {
+  background: #d69393; /* 호버 시 핸들의 배경 색상 */
+}
+
+/* 스크롤 안보이고 스크롤링되기*/
+/* 전체 웹페이지에 적용되는 스크롤바 숨기기 */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari 등에서 스크롤바 숨기기 */
+}
+
+html, body {scroll-behavior: smooth; /* 부드러운 스크롤 동작 적용 */}
+
+html {scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */}
+
 @media only screen and (max-width: 767px) {
   #root {
     

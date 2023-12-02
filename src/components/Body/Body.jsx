@@ -12,7 +12,8 @@ import Page3 from "@components/Body/bodyComponet/Page3";
 import Page4 from "@components/Body/bodyComponet/Page4";
 import Page5 from "@components/Body/bodyComponet/Page5";
 import Page6 from "@components/Body/bodyComponet/Page6";
-import Page7 from "@components/Body/bodyComponet/Page7";
+import Page7_1 from "@components/Body/bodyComponet/Page7_1";
+import Page7_2 from "@components/Body/bodyComponet/Page7_2";
 
 const Body = () => {
 
@@ -21,37 +22,6 @@ const Body = () => {
   const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const [currentSection, setCurrentSection] = useState(0);
   const isScrolling = useRef(false);
-
-  // const scrollToSection = (section) => {
-  //   section.scrollIntoView({ behavior: 'smooth' });
-  // };
-
-  // const handleScroll = _.throttle(() => {
-  //   if (isScrolling.current) return;
-
-  //   const scrollPosition = window.scrollY; // 모바일 환경 고려
-
-  //   for (let i = 0; i < sectionRefs.length; i++) {
-  //     const section = sectionRefs[i].current;
-  //     if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-  //       if (currentSection !== i) {
-  //         setCurrentSection(i);
-  //         isScrolling.current = true;
-  //         scrollToSection(section);
-
-  //         setTimeout(() => {
-  //           isScrolling.current = false;
-  //         }, 1500); // 스크롤 애니메이션 지속 시간 증가
-  //       }
-  //       break;
-  //     }
-  //   }
-  // }, 150); // 스로틀링 시간 증가
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [currentSection]);
 
   let options = {
     width: wid,
@@ -87,7 +57,8 @@ const Body = () => {
             <div ref={sectionRefs[3]} className='page'><Page4/></div>
             <div ref={sectionRefs[4]} className='page'><Page5/></div>
             <div ref={sectionRefs[5]} className='page'><Page6/></div>
-            <div ref={sectionRefs[6]} className='page'><Page7/></div>
+            <div ref={sectionRefs[6]} className='page'><Page7_1/></div>
+            <div ref={sectionRefs[6]} className='page'><Page7_2/></div>
         </div>
       </div>
       }

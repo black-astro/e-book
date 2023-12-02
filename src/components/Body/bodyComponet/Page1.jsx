@@ -14,10 +14,7 @@ const Page_1 = () => {
     <div className="body_1-box" style={{paddingTop:'3em',paddingBottom:'3em'}}>
       {/* 타이틀 */}
         <div className="body_1-title">
-            <span>
-                <span>1. </span>
-                심장에 대한 이해
-            </span>
+            <span>심장에 대한 이해</span>
         </div>
         <div className="body_1-info">
             {/*왼쪽 이미지 사진 */}
