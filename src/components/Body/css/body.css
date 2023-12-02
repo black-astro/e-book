@@ -19,6 +19,16 @@
   display: block;
   width: auto !important;
 }
+
+.hoverImg:hover{
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.7s;
+}
+
 /*========== body 반응형 미디어 쿼리 ==========*/
 @media only screen and (max-width: 767px) {
   /*모바일 스타일*/

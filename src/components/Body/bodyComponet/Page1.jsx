@@ -19,8 +19,7 @@ const Page_1 = () => {
         <div className="body_1-info">
             {/*왼쪽 이미지 사진 */}
             <div className="bon-img-box">
-              <Dialog link='img/bon3.svg'/>
-              <Bon width={"80%"} height={"100%"} fill ="none"/>    
+             <ImgHeart link='img/bon3.svg'/>
             </div>
 
             {/*오른쪽 글 */}      
@@ -37,5 +36,21 @@ const Page_1 = () => {
     </div>
   );
 };
+
+const ImgHeart = ({link}) =>{
+
+  const imgZoom = useRef({});
+
+  const modal_On = () => {
+    imgZoom.current.handleOpen();
+  }
+
+  return (
+    <>        
+      <Dialog link={link} ref={imgZoom}/>
+      <Bon className="hoverImg" width={"80%"} height={"100%"} fill ="none" onClick={() => {modal_On()}}/>
+    </>
+  );
+}
 
 export default Page_1;

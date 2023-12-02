@@ -18,20 +18,34 @@ const Page_3 = () => {
         <div className="body_3-info">
             {/* 정상 심장 */}
             <div className="bon-img-left-box">
-              <Dialog link='img/normal_heart.svg'/>
-              <img src="img/normal_heart.svg"/>
+              <ImgHeart link='img/normal_heart.svg'/>
               <div className="bon-img-info-text">정상 심장</div>
             </div>
 
             {/* 앱스타인 기형 심장 */}      
             <div className="bon-img-right-box">
-              <Dialog link='img/normal_heart.svg'/>
-              <img src="img/deformed_heart.svg"/>
+              <ImgHeart link='img/normal_heart.svg'/>
               <div className="bon-img-info-text">앱스타인 기형 심장</div>
             </div>
         </div> 
     </div>
   );
 };
+
+const ImgHeart = ({link}) =>{
+
+  const imgZoom = useRef({});
+
+  const modal_On = () => {
+    imgZoom.current.handleOpen();
+  }
+
+  return (
+    <>
+      <Dialog link={link} ref={imgZoom}/>
+      <img className="hoverImg" src={link} onClick={() => {modal_On()}}/>
+    </>
+  );
+}
 
 export default Page_3;

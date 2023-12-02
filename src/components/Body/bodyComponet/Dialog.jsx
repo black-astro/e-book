@@ -1,4 +1,4 @@
-import React, { useState, useRef ,Fragment, useEffect} from 'react';
+import React, { useState, useRef ,Fragment, useEffect, forwardRef,useImperativeHandle} from 'react';
 import "@components/Body/css/body.css";
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
@@ -25,7 +25,13 @@ const ImgLodingBox = ({link}) => {
 }
 
 
-const SvgViewer = ({link}) => {
+const SvgViewer = forwardRef(({link},ref) => {
+    useImperativeHandle(ref, () => ({
+        // 부모 컴포넌트에서 사용할 함수를 선언
+        handleOpen
+      }))
+
+
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false); // 로딩 상태 추가
 
@@ -58,7 +64,7 @@ const SvgViewer = ({link}) => {
     return (
         <div style={{position:'relative'}}>    
             <div style={{textAlign:'end', paddingRight:'5em',position:'absolute', left:'80%'}}>
-                <ZoomInIcon sx={{
+                {/* <ZoomInIcon sx={{
                                 cursor: 
                                 'pointer', '&:hover': {color: '#965757',},
                                 color:'#ffcaca',
@@ -66,7 +72,7 @@ const SvgViewer = ({link}) => {
                                 width:'40px',
                                 height:'40px',
                             }} 
-                    onClick={handleOpen}/>
+                    onClick={handleOpen}/> */}
 
                 <BackDrop status={loading}/> {/* 로딩 중일 때만 BackDrop 표시 */}
                 { open &&
@@ -106,5 +112,5 @@ const SvgViewer = ({link}) => {
             </div>
     </div>
     );
-};
+});
     export default SvgViewer;

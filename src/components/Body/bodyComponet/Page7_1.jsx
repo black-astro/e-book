@@ -55,8 +55,7 @@ const Page_7_1 = () => {
                 </p>
               </div>
               {/* 이미지 파일 */}
-              <div className="body_7_1-img-box">
-                <Dialog link='img/page7heart.svg'/>
+              <div className="body_7_1-img-box hoverImg">
                 <ImgBox link='img/page7heart.svg'/>
               </div>
             </div>
@@ -65,17 +64,24 @@ const Page_7_1 = () => {
   );
 };
 
+const ImgBox = ({link}) =>{
 
-const ImgBox = ({link}) => {
- 
+  const imgZoom = useRef({});
+
+  const modal_On = () => {
+    imgZoom.current.handleOpen();
+  }
+
   return (
-    <div className="page7_1-img-box">
-      <div className="page7_1-img-card" style={{width:'300px', height:'300px'}}>
-        <img src={link} />
+    <>
+      <div className="page7_1-img-box">
+        <div className="page7_1-img-card" style={{width:'300px', height:'300px'}}>
+          <Dialog link={link} ref={imgZoom}/>
+          <img src={link} onClick={() => {modal_On()}}/>
+        </div>
+        <div className="page7_1-img-text"></div>
       </div>
-      <div className="page7_1-img-text">
-      </div>
-    </div>
+    </>
   );
 }
 
