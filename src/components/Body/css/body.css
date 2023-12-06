@@ -33,7 +33,9 @@
 @media only screen and (max-width: 767px) {
   /*모바일 스타일*/
   .body-root{
-    padding: 0 5em 0 5em;
+    /* padding: 0 5em 0 5em; */
+   
+   
   }
 }
 
@@ -41,6 +43,7 @@
   /* 테블릿 스타일 */
   .body-root{
     padding: 0 5em 0 5em;
+  
   }
 }
 
@@ -48,5 +51,6 @@
   /* 라지 테블릿 스타일 */
   .body-root{
     padding: 0 5em 0 5em;
+    
   }
 }
